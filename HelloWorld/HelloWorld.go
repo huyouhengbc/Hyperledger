@@ -37,4 +37,3 @@ func main() {
 		fmt.Printf("Error starting Hello World chaincode: %s", err)
 	}
 }
-
