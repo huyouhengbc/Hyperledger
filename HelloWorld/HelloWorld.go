@@ -1,10 +1,7 @@
 package main
 
 import (
-	//"errors"
 	"fmt"
-	//"strconv"
-
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 )
 
@@ -12,19 +9,19 @@ import (
 type HelloWorldChaincode struct {
 }
 
-func (t *HelloWorldChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+func (t *HelloWorldChaincode) Init(stub shim.ChaincodeStub, function string, args []string) ([]byte, error) {
     fmt.Printf("HelloWorld - Init called with function %s!\n", function)
 
     return nil, nil
 }
 
-func (t *HelloWorldChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+func (t *HelloWorldChaincode) Invoke(stub shim.ChaincodeStub, function string, args []string) ([]byte, error) {
     fmt.Printf("HelloWorld - Invoke called with function %s!\n", function)
 
     return nil, nil    
 }
 
-func (t *HelloWorldChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+func (t *HelloWorldChaincode) Query(stub shim.ChaincodeStub, function string, args []string) ([]byte, error) {
     fmt.Printf("HelloWorld - Query called with function %s!\n", function)
 
     message := "Hello World"
